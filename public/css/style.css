@@ -64,10 +64,7 @@ button {
 
 #message-1 {
     font-size: large;
-}
-
-#message-2 {
-    font-style: italic;
+    color: black;
 }
 
 #about-me {
