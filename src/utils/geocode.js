@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 const request = require('request')
 
-const geocode = (adderess, callback) => {
-    const url = 'https://us1.locationiq.com/v1/search?key=pk.48571f7080e6d3e84c234a0c804c70a4&q=' + encodeURIComponent(adderess) + '&format=json'
+const geocode = (address, callback) => {
+    const url = `${process.env.GEOCODE_API_BASE_URL}?key=${process.env.GEOCODE_API_KEY}&q=${encodeURIComponent(address)}&format=json`;
 
     request({ url: url, json: true }, (error, response) => {
         if (error) {
@@ -23,3 +25,4 @@ const geocode = (adderess, callback) => {
 }
 
 module.exports = geocode
+

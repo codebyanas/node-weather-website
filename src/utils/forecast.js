@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 const request = require('request')
 
 const forecast = (latitude, longitude, callback) => {
-    const url = 'http://api.weatherstack.com/current?access_key=bbaa6fec00861d51c3686bd039830d73&query=' + latitude + ',' + longitude + '&units=m'
+    const url = `${process.env.FORECAST_API_BASE_URL}?access_key=${process.env.FORECAST_API_KEY}&query=${latitude},${longitude}&units=m`;
 
     request({ url: url, json: true }, (error, response) => {
         if (error) {
