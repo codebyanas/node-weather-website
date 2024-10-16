@@ -1,0 +1,23 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "A simple web server project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js",
+    "build": "echo 'No build step defined'"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "hbs": "^4.2.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
